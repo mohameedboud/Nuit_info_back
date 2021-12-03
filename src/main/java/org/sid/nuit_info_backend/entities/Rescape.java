@@ -11,7 +11,9 @@ import java.util.Date;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Rescape {
+@Inheritance(strategy=InheritanceType.JOINED)
+@DiscriminatorValue("R")
+public class Rescape extends personne {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
     private String nom ;

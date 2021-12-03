@@ -10,6 +10,8 @@ import java.util.Collection;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorValue("V")
 public class Volontaire extends personne {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;

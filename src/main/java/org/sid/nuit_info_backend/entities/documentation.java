@@ -15,10 +15,10 @@ public class documentation {
     private String Titre ;
     private String Contenue ;
     private Boolean isValid ;
-    /*@ManyToOne
-    private Equipage equipage ;
     @ManyToOne
-    private Rescape rescape ;*/
+    private personne personne ;
+   /* @ManyToOne
+    private Rescape rescape ;
     @ManyToOne
-    private Volontaire volontaire ;
+    private Volontaire volontaire ;*/
 }

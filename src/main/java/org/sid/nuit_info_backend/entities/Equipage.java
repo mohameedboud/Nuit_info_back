@@ -10,7 +10,9 @@ import java.util.Collection;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Equipage {
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorValue("E")
+public class Equipage extends personne {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
     private String nom ;
